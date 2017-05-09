@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 
-import argparse
+import argparse, sys
 
 
 class Board:
@@ -86,5 +86,9 @@ if __name__ == "__main__":
     n = vars(args)['n'][0]
 
     board = Board(n)
-    board.place(0)
-    print board
+    status = board.place(0)
+    if status:
+        print board
+    else:
+        print "No solutions are possible."
+        sys.exit(2)
