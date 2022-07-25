@@ -88,7 +88,7 @@ if __name__ == "__main__":
     board = Board(n)
     status = board.place(0)
     if status:
-        print board
+        print(board)
     else:
-        print "No solutions are possible."
+        print("No solutions are possible.")
         sys.exit(2)
