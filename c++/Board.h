@@ -14,7 +14,10 @@ class Board {
 
   private:
     int         count;
-    bool**       board;
+    int**       board;
+
+    void place_queen(int, int, int);
+    void pull_queen(int, int);
 };
 
 #endif // BOARD_H
